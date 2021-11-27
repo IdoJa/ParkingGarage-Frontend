@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Monoton&family=Poppins:wght@200&display=swap');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+.menu-area {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: background 0.5s;
+}
+
+.menu-area .logo img {
+    height: 70px;
+    transition: height 0.5s;
+    padding-top: 10px;
+}
+
+.menu-area ul {
+    width: 500px;
+    justify-content: space-around;
+    list-style: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+}
+
+.menu-area ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #262626;
+}
+
+/* On navbarStatus Change - offsetY > 0 */
+.menu-area.cursor-nav {
+    background: #262626;
+    z-index: 999;
+}
+
+.menu-area.cursor-nav a {
+    color: #fff;
+}
+
+.menu-area.cursor-nav .logo img {
+    height: 65px;
+}
+
+
