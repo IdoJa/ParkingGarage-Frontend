@@ -10,7 +10,7 @@ import { Scroll } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  public navbarStatus = 0;
+  public navbarStatus = 1; // for activate scroll - navbarStatus = 0
 
   constructor() { }
 
@@ -21,10 +21,10 @@ export class NavbarComponent implements OnInit {
   // when scrolling down apply class change for navbar
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event: Scroll) {
-    this.navbarStatus = 0;
+    // this.navbarStatus = 0;
     
-    if (window.pageYOffset > 0) {
-      this.navbarStatus = 1;
-    }
+    // if (window.pageYOffset > 0) {
+    //   this.navbarStatus = 1;
+    // }
   }
 }

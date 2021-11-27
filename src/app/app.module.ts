@@ -12,6 +12,7 @@ import { CheckInFormComponent } from './check-in-area/check-in-form/check-in-for
 
 // Material Ui Imports
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
@@ -33,6 +34,7 @@ import { MatButtonModule } from "@angular/material/button";
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatButtonModule
