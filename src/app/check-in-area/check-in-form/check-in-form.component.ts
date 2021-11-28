@@ -57,6 +57,13 @@ export class CheckInFormComponent implements OnInit {
       return;
     }
 
+    try {
+      const vehicleResponse = await this.vehiclesService.createVehicle(this.vehicle);
+      this.notificationService.success(`Check In Successfully! <br> Vehicle is parking on lot ${vehicleResponse.parkingLot.id}`);
+    } catch (err) {
+      this.notificationService.error(err);
+    }
+
     console.log(this.vehicleFormInfo.controls);
   }
 }
