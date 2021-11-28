@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { GsapWrapper } from 'src/app/services/global-services/design-services/gsap-wrapper';
 
 @Component({
   selector: 'app-garage',
@@ -9,7 +10,13 @@ export class GarageComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('appGarage') appGarage: ElementRef;
+
   ngOnInit(): void {
   }
-
+  
+  ngAfterViewInit() {
+    let gsapWrapper = new GsapWrapper();
+    gsapWrapper.fadeIn(this.appGarage.nativeElement);
+  }
 }

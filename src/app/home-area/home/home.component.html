@@ -1,2 +1,4 @@
-<app-banner></app-banner>
-<app-content></app-content>
+<app-banner (isLearnMoreClickedEvent)="getIsLearnMoreClickedFromChild($event)"></app-banner>
+<div #appContent>
+    <app-content></app-content>
+</div>
