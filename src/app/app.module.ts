@@ -18,6 +18,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from '@angular/material/select';
+import { CheckOutComponent } from './check-out-area/check-out/check-out.component';
+import { CheckOutFormComponent } from './check-out-area/check-out-form/check-out-form.component';
 
 
 
@@ -30,7 +32,9 @@ import { MatSelectModule } from '@angular/material/select';
     ContentComponent,
     HomeComponent,
     CheckInComponent,
-    CheckInFormComponent
+    CheckInFormComponent,
+    CheckOutComponent,
+    CheckOutFormComponent
   ],
   imports: [
     BrowserModule,

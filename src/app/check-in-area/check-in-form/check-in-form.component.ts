@@ -30,7 +30,6 @@ export class CheckInFormComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     try {
       this.vehiclesList = await this.vehiclesService.getAllVehiclesNames();
-      console.log(this.vehiclesList);
     }
     catch (err) {
       this.notificationService.error(err);
@@ -42,9 +41,8 @@ export class CheckInFormComponent implements OnInit {
   public async getAllTickets(vehicleFormInfo: NgForm) {
     let selectedVehicleName = vehicleFormInfo.controls['vehicleName'].value;
     try {
-
       this.ticketsList = await this.ticketsService.getAllTicketNamesByVehicleName(selectedVehicleName);
-      console.log(this.ticketsList);
+      
     }
     catch (err) {
       this.notificationService.error(err);
@@ -63,7 +61,5 @@ export class CheckInFormComponent implements OnInit {
     } catch (err) {
       this.notificationService.error(err);
     }
-
-    console.log(this.vehicleFormInfo.controls);
   }
 }
