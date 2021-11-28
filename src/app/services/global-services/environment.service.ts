@@ -10,5 +10,6 @@ export class EnvironmentService {
 
   public readonly vehiclesUrl = `${environment.apiServerUrl}` + '/api/vehicles';
   public readonly ticketsUrl = `${environment.apiServerUrl}` + '/api/tickets';
+  public readonly parkingLotsUrl = `${environment.apiServerUrl}` + '/api/parkinglots';
 
 }

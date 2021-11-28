@@ -9,17 +9,20 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home-area/home/home.component';
 import { CheckInComponent } from './check-in-area/check-in/check-in.component';
 import { CheckInFormComponent } from './check-in-area/check-in-form/check-in-form.component';
+import { CheckOutComponent } from './check-out-area/check-out/check-out.component';
+import { CheckOutFormComponent } from './check-out-area/check-out-form/check-out-form.component';
 import { HttpClientModule } from '@angular/common/http';
 
 // Material Ui Imports
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from '@angular/material/select';
-import { CheckOutComponent } from './check-out-area/check-out/check-out.component';
-import { CheckOutFormComponent } from './check-out-area/check-out-form/check-out-form.component';
+import { MatTableModule } from '@angular/material/table';
+import { GarageComponent } from './garage-area/garage/garage.component';
+import { GarageTableComponent } from './garage-area/garage-table/garage-table.component';
+
 
 
 
@@ -34,7 +37,9 @@ import { CheckOutFormComponent } from './check-out-area/check-out-form/check-out
     CheckInComponent,
     CheckInFormComponent,
     CheckOutComponent,
-    CheckOutFormComponent
+    CheckOutFormComponent,
+    GarageComponent,
+    GarageTableComponent
   ],
   imports: [
     BrowserModule,
@@ -42,11 +47,11 @@ import { CheckOutFormComponent } from './check-out-area/check-out-form/check-out
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [LayoutComponent]
