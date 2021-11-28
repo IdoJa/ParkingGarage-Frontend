@@ -56,5 +56,7 @@ export class CheckInFormComponent implements OnInit {
       this.notificationService.error("Please make sure all fields are filled and correct");
       return;
     }
+
+    console.log(this.vehicleFormInfo.controls);
   }
 }
