@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home-area/home/home.component';
 import { CheckInComponent } from './check-in-area/check-in/check-in.component';
 import { CheckInFormComponent } from './check-in-area/check-in-form/check-in-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Material Ui Imports
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -16,6 +17,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
@@ -33,11 +36,13 @@ import { MatButtonModule } from "@angular/material/button";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatIconModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [LayoutComponent]

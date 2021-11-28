@@ -1,5 +1,43 @@
-<form #orderFormInfo="ngForm">
-    <!-- Fields-->
-    <!-- City Selection-->
-   <mat-form-field></mat-form-field>
-</form>
+<div class="check-in-container">
+    <form #vehicleFormInfo="ngForm">
+        <!-- Fields-->
+        <mat-form-field appearance="fill">
+            <mat-label>Vehicle</mat-label>
+            <mat-select (selectionChange)="test(vehicleFormInfo)" name="class" [(ngModel)]="vehicle.class" #vehicleInfo="ngModel" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let v of vehiclesList" [value]="v">
+                    {{v}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="vehicleInfo.errors?.required">Please choose your vehicle</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Ticket</mat-label>
+            <mat-select name="class" [(ngModel)]="vehicle.ticket"
+                #ticketInfo="ngModel" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let t of ticketsList" [value]="t">
+                    {{t}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="ticketInfo.errors?.required">Please choose your ticket</mat-error>
+        </mat-form-field>
+        <br>
+
+        
+        <mat-form-field>
+        <mat-label>License Plate Number</mat-label>
+        
+            <input matInput type="text" name="licensePlateId" minlength="4" maxlength="10"
+                [(ngModel)]="vehicle.licensePlateId" #licensePlateIdInfo="ngModel" required />
+        </mat-form-field>
+        <br>
+    
+        
+        <button mat-stroked-button>
+            <mat-icon>check</mat-icon> Check In
+        </button>
+    </form>
+</div>
