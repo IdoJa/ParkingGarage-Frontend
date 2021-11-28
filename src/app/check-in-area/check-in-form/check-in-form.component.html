@@ -1,6 +1,21 @@
 <div class="check-in-container">
     <form #vehicleFormInfo="ngForm">
         <!-- Fields-->
+        <mat-form-field>
+        <mat-label>Name</mat-label>
+            <input matInput type="text" name="name" minlength="3" maxlength="20"
+                [(ngModel)]="vehicle.name" #nameInfo="ngModel" required />
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" name="phone" minlength="9" maxlength="15" [(ngModel)]="vehicle.phone"
+                #phoneInfo="ngModel" required />
+        </mat-form-field>
+        <br>
+
+
         <mat-form-field appearance="fill">
             <mat-label>Vehicle</mat-label>
             <mat-select (selectionChange)="getAllTickets(vehicleFormInfo)" name="class" [(ngModel)]="vehicle.class" #vehicleInfo="ngModel" required>
@@ -29,7 +44,6 @@
         
         <mat-form-field>
         <mat-label>License Plate Number</mat-label>
-        
             <input matInput type="text" name="licensePlateId" minlength="4" maxlength="10"
                 [(ngModel)]="vehicle.licensePlateId" #licensePlateIdInfo="ngModel" required />
         </mat-form-field>
