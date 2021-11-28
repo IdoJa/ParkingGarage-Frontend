@@ -18,13 +18,13 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Vehicle</mat-label>
-            <mat-select (selectionChange)="getAllTickets(vehicleFormInfo)" name="class" [(ngModel)]="vehicle.class" #vehicleInfo="ngModel" required>
+            <mat-select (selectionChange)="getAllTickets(vehicleFormInfo)" name="vehicleName" [(ngModel)]="vehicleName" #vehicleNameInfo="ngModel" required>
                 <mat-option>--</mat-option>
                 <mat-option *ngFor="let v of vehiclesList" [value]="v">
                     {{v}}
                 </mat-option>
             </mat-select>
-            <mat-error *ngIf="vehicleInfo.errors?.required">Please choose your vehicle</mat-error>
+            <mat-error *ngIf="vehicleNameInfo.errors?.required">Please choose your vehicle</mat-error>
         </mat-form-field>
         <br>
 
@@ -46,11 +46,37 @@
         <mat-label>License Plate Number</mat-label>
             <input matInput type="text" name="licensePlateId" minlength="4" maxlength="10"
                 [(ngModel)]="vehicle.licensePlateId" #licensePlateIdInfo="ngModel" required />
+            <mat-error *ngIf="licensePlateIdInfo.errors?.required">Please enter your license plate number</mat-error>
+        </mat-form-field>
+        <br><br>
+
+        <mat-form-field>
+            <mat-label>Height</mat-label>
+            <input matInput type="number" name="height" min="4" max={{maxNumber}} [(ngModel)]="vehicle.height"
+                #heightInfo="ngModel" required />
+            <mat-error *ngIf="heightInfo.errors?.required">Please enter your vehicle height</mat-error>
+            <mat-error *ngIf="heightInfo.errors?.min && heightInfo.errors?.touched">Number too short</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+            <mat-label>Width</mat-label>
+            <input matInput type="number" name="width" minlength="4" max={{maxNumber}} [(ngModel)]="vehicle.width"
+                #widthInfo="ngModel" required />
+            <mat-error *ngIf="widthInfo.errors?.required">Please enter your vehicle width</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+            <mat-label>Length</mat-label>
+            <input matInput type="number" name="length" minlength="4" maxlength={{maxNumber}} [(ngModel)]="vehicle.length"
+                #lengthInfo="ngModel" required />
+            <mat-error *ngIf="lengthInfo.errors?.required">Please enter your vehicle length</mat-error>
         </mat-form-field>
         <br>
     
         
-        <button mat-stroked-button>
+        <button class="check-in-button" mat-stroked-button>
             <mat-icon>check</mat-icon> Check In
         </button>
     </form>
