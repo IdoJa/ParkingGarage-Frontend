@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutComponent } from './layout-area/layout/layout.component';
 import { NavbarComponent } from './layout-area/navbar/navbar.component';
 import { BannerComponent } from './home-area/banner/banner.component';
-import { ContentComponent } from './home-area/content/content.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home-area/home/home.component';
 import { CheckInComponent } from './check-in-area/check-in/check-in.component';
@@ -32,7 +31,6 @@ import { GarageTableComponent } from './garage-area/garage-table/garage-table.co
     LayoutComponent,
     NavbarComponent,
     BannerComponent,
-    ContentComponent,
     HomeComponent,
     CheckInComponent,
     CheckInFormComponent,

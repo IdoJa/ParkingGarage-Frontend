@@ -6,9 +6,10 @@
             <input matInput type="text" name="licensePlateId" minlength="4" maxlength="10"
                 [(ngModel)]="licensePlateId" #licensePlateIdInfo="ngModel" required />
             <mat-error *ngIf="licensePlateIdInfo.errors?.required">Please enter your license plate number</mat-error>
+            <mat-error *ngIf="licensePlateIdInfo.errors?.minlength">License plate length too short</mat-error>
+            <mat-error *ngIf="licensePlateIdInfo.errors?.maxlength">License plate should be shorter</mat-error>
         </mat-form-field>
         <br><br>
-
 
         <button class="check-out-button" mat-stroked-button>
             <mat-icon>cancel</mat-icon> Check Out

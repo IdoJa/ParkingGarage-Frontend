@@ -36,8 +36,6 @@ export class CheckInFormComponent implements OnInit {
     }
   }
 
-
-
   public async getAllTickets(vehicleFormInfo: NgForm) {
     let selectedVehicleName = vehicleFormInfo.controls['vehicleName'].value;
     console.log(selectedVehicleName);

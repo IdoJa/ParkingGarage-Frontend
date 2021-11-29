@@ -20,7 +20,6 @@ export class GarageTableComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     try {
       this.parkingLotsList = await this.parkingLotsService.getAllParkingLots();
-      console.log(this.parkingLotsList); // TODO: Delete
     }
     catch (err) {
       this.notificationService.error(err);

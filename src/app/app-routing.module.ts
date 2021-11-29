@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: "check-out", component: CheckOutComponent },
   { path: "garage", component: GarageComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "**", redirectTo: "/home" }
 ];
 
 @NgModule({
