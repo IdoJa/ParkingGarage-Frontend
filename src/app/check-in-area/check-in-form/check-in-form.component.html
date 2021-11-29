@@ -5,6 +5,8 @@
         <mat-label>Name</mat-label>
             <input matInput type="text" name="name" minlength="3" maxlength="20"
                 [(ngModel)]="vehicle.name" #nameInfo="ngModel" required />
+            <mat-error *ngIf="nameInfo.errors?.required">Please enter your name</mat-error>
+            <mat-error *ngIf="nameInfo.errors?.minlength">Name length too short</mat-error>
         </mat-form-field>
         <br>
 
@@ -12,6 +14,9 @@
             <mat-label>Phone</mat-label>
             <input matInput type="text" name="phone" minlength="9" maxlength="15" [(ngModel)]="vehicle.phone"
                 #phoneInfo="ngModel" required />
+            <mat-error *ngIf="phoneInfo.errors?.required">Please enter your phone</mat-error>
+            <mat-error *ngIf="nameInfo.errors?.minlength">Phone length too short</mat-error>
+            <mat-error *ngIf="nameInfo.errors?.maxlength">Phone length should be shorter</mat-error>
         </mat-form-field>
         <br>
 

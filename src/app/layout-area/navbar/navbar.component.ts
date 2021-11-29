@@ -17,14 +17,5 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Possible to apply the scroll as a service
-  // when scrolling down apply class change for navbar
-  @HostListener('window:scroll', ['$event']) // for window scroll events
-  onScroll(event: Scroll) {
-    // this.navbarStatus = 0;
-    
-    // if (window.pageYOffset > 0) {
-    //   this.navbarStatus = 1;
-    // }
-  }
+  
 }

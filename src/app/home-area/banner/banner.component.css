@@ -1,5 +1,5 @@
 .banner-area {
-    background: url(../../../assets/parking7.jpeg);
+    background: url(../../../assets/parking.jpeg);
     -webkit-background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -21,9 +21,9 @@
 .banner-text a {
     text-decoration: none;
     background: #262626;
-    color: #fff;
     padding: 15px 30px;
     display: inline-block;
     margin-top: 20px;
     border-radius: 50px;
 }
+

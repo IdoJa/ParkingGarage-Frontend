@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GsapWrapper } from 'src/app/services/global-services/design-services/gsap-wrapper';
 
 @Component({
@@ -6,14 +6,12 @@ import { GsapWrapper } from 'src/app/services/global-services/design-services/gs
   templateUrl: './garage.component.html',
   styleUrls: ['./garage.component.css']
 })
-export class GarageComponent implements OnInit {
+export class GarageComponent implements AfterViewInit {
 
   constructor() { }
 
   @ViewChild('appGarage') appGarage: ElementRef;
 
-  ngOnInit(): void {
-  }
   
   ngAfterViewInit() {
     let gsapWrapper = new GsapWrapper();

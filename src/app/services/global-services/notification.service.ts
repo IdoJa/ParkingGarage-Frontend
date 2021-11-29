@@ -7,7 +7,7 @@ import { ErrorsService } from './errors.service';
 })
 export class NotificationService {
 
-  private notyf = new Notyf({ duration: 4000, ripple: true, position: { x: "left", y: "top" } });
+  private notyf = new Notyf({ duration: 6000, ripple: true, position: { x: "left", y: "bottom" } });
 
   public constructor(private errorsService: ErrorsService) { }
 

@@ -10,17 +10,10 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  @ViewChild('appContent') appContent: ElementRef;
 
   ngOnInit(): void {
   }
 
-  public getIsLearnMoreClickedFromChild($event: boolean): void {
-    if ($event) {
-      // let gsapWrapper = new GsapWrapper();
-      // // gsapWrapper.scrollToHeight(730);
-      // // gsapWrapper.fadeIn(this.appContent.nativeElement);
-    }
-  }
+  
 
 }

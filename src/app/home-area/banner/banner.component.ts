@@ -7,13 +7,15 @@ import { EventEmitter } from "@angular/core";
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
-export class BannerComponent {
+export class BannerComponent implements AfterViewInit {
 
-  @Output()
-  public isLearnMoreClickedEvent = new EventEmitter<boolean>();
+  @ViewChild('appBannerText') appBannerText: ElementRef;
 
-  public outputToParent() {
-    this.isLearnMoreClickedEvent.emit(true);
+  ngAfterViewInit() {
+    let gsapWrapper = new GsapWrapper();
+    gsapWrapper.fadeUp(this.appBannerText.nativeElement);
   }
+
+  
 
 }
