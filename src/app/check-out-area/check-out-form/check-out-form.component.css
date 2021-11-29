@@ -13,3 +13,8 @@
     position: relative;
     left: 15%;
 }
+
+.center {
+    position: relative;
+    left: 20px;
+}

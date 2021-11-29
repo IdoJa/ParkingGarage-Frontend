@@ -1,6 +1,9 @@
 <div class="check-out-container">
     <form (submit)="checkOut()" #vehicleFormInfo="ngForm">
         <!-- Fields-->
+        <h2 class="center">Check Out</h2>
+        <br>
+
         <mat-form-field>
             <mat-label>License Plate Number</mat-label>
             <input matInput type="text" name="licensePlateId" minlength="4" maxlength="10"

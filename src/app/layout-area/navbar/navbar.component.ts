@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Scroll } from '@angular/router';
 
 
 
@@ -10,7 +9,7 @@ import { Scroll } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  public navbarStatus = 1; // for activate scroll - navbarStatus = 0
+  public navbarStatus = 1; 
 
   constructor() { }
 

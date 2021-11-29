@@ -1,6 +1,9 @@
 <div class="check-in-container">
     <form (submit)="checkIn()" #vehicleFormInfo="ngForm">
         <!-- Fields-->
+        <h2 class="center">Check In</h2>
+        
+
         <mat-form-field>
         <mat-label>Name</mat-label>
             <input matInput type="text" name="name" minlength="3" maxlength="20"
