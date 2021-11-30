@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiServerUrl: ""
+  apiServerUrl: "https://ido-ja-parking.herokuapp.com/"
 };
